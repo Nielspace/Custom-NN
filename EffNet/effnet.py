@@ -1,3 +1,4 @@
+#inpired from https://github.com/zsef123/EfficientNets-PyTorch
 import math 
 import torch
 from torch import nn, optim
@@ -148,8 +149,8 @@ class EfficientNet(nn.Module):
     def forward(self, inputs):
         stem = self.stem(inputs)
         x = self.blocks(stem)
-        head = self.head(x)
-        return head
+        out = self.head(x)
+        return out
 
 if __name__ == "__main__":
     X = torch.randn(10, 3, 32, 32)
