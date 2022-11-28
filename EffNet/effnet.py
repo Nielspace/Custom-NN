@@ -27,7 +27,7 @@ class sqExc(nn.Module):
 class SamePadConv2d(nn.Conv2d):
     """
     Conv with TF padding='same'
-    # https://github.com/pytorch/pytorch/issues/3867#issuecomment-349279036
+    https://github.com/pytorch/pytorch/issues/3867#issuecomment-349279036
     """
 
     def __init__(self, in_channels, out_channels, kernel_size, stride=1, dilation=1, groups=1, bias=True, padding_mode="zeros"):
